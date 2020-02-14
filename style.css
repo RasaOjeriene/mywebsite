@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+button{
+    color: #fff;
+    background-color: #555;
+    border-bottom: 1px solid #efefef;
+    width: 120px;
+}
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+/* navigation */
+.navigation{
+    width: 100%;
+    height: 70px;
+    margin-top: 15px;
+}
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      background: #ddd;
+  }
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
+
+  /* promo */
+
+#promo{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Krikstynos.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-size: 25px;
+  background-position: center center;
+  padding: 200px;
+}
+#promo button{
+  height: 40px;
+  width: 180px;
+}
+#formyte{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),;
+  background-size: cover;
+  background-position:center;
+  max-width: 450px;
+  margin: 10px auto;
+  display: none;
+}
+.booking-form-box{
+  max-width: 450px;
+  margin: 10% auto 0;
+  background-size: cover;
+  background-position: center;
+}
+.radio-btn{
+  margin: 10px 20px;
+}
+.radio-btn .btn{
+  margin: 20px 10px 20px 0;
+  box-shadow: none;
+}
+.radio-btn .btn::after{
+  content: '';
+  height: 15px;
+  width: 15px;
+  top: -2px;
+  left: -1px;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  border: 3px solid #fff;
+  visibility: visible;
+  border-radius: 50%;
+}
+.radio-btn .btn:checked::after{
+  content: '';
+  background-color: #000;
+  transition: 0.5s;
+}
+.radio-btn span{
+  color: rgb(248, 247, 247);
+  margin-right: 5px;
+  font-size: 12px;
+}
+.booking-form{
+  padding: 0 20px 20px;
+}
+.booking-form label{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgb(248, 247, 247);
+}
+input::placeholder{
+  color: rgb(104, 104, 104);
+}
+.input-grp{
+  width: 151px;
+  display: inline-block;
+}
+.form-control{
+  font-size: 12px;
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+  box-shadow: none;
+}
+.select-date::webkit-inner-spin-button,
+.select-date::webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.select-date::webkit-calendar-picker-indicator{
+  background: transparent;
+}
+.custom-select{
+  color: #fff;
+  font-size: 12px;
+  border: 1px solid #ced4da;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+}
+.custom-select option{
+  color: #333;
+}
+
+
+/* about me */
+.text-muted{
+    font-size: 1rem;
+    line-height: 2.5;
+}
+.mintys{
+    width: 100%;
+    height: 50vh;
+
+}
+.apie p{
+    padding: 10%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    background-color: #efefef;
+    border: 10px solid #fff;
+}
+.apie p::before{
+    content: '\94';
+    font-size: 50px;
+    color: #555;
+    position: relative;
+    line-height: 10px;
+    bottom: -10px;
+    left: -5px;
+}
+.apie p::after{
+    content: '\94';
+    font-size: 50px;
+    color: #555;
+    position: relative;
+    line-height: 10px;
+    bottom: -15px;
+    left: 5px;
+}
+
+
+/* slideshow */
+.slideshow{
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 700px;
+    background: #dadada;
+    box-sizing: border-box;
+}
+.content{
+    margin: auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+}
+.content-carrousel{
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
+.content-carrousel:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.content-carrousel figure{
+    width: 100%;
+    height: 145px;
+    border: 1px solid #4d444d;
+    overflow: hidden;
+    position: absolute;
+}
+.content-carrousel figure:nth-child(1){
+    transform: rotateY(0deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(2){
+    transform: rotateY(40deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(3){
+    transform: rotateY(80deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(4){
+    transform: rotateY(120deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(5){
+    transform: rotateY(160deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(6){
+    transform: rotateY(200deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(7){
+    transform: rotateY(240deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(8){
+    transform: rotateY(280deg) translateZ(300px);
+}
+.content-carrousel figure:nth-child(9){
+    transform: rotateY(320deg) translateZ(300px);
+}
+.shadow{
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 2px;
+}
+.content-carrousel img{
+    image-rendering: auto;
+    transition: all 300ms;
+    height: 100%;
+    width: 100%;
+}
+.content-carrousel img:hover{
+    transform: scale(1.2);
+    transition: all 300ms;
+}
+@keyframes rotar{
+    from{
+        transform: rotateY(0deg);
+    } to{
+        transform: rotateY(360deg);
+    }
+}
+
+/* gallery */
+.row > .column {
+  padding: 0 8px;
+
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 25%;
+
+}
+@media (max-width: 768px) {
+ .column {
+   width: 100%;
+  }
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mySlides {
+  display: none;
+}
+.cursor {
+  cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+img {
+  margin-bottom: -4px;
+}
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  transition: 0.3s;
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* contact */
+.conteiner-section{
+  margin: 50px 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.contact-method{
+  width: 228px;
+  height: 140px;
+  display: inline-block;
+  background: #494949;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.contact-method .ikonos{
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  line-height: 140px;
+  background: #dadada;
+  z-index: 1;
+  transition: transform 0.6s;
+}
+.contact-method span{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0;
+}
+.contact-method:hover .ikonos{
+  transform: translateY(-40px);
+}
+
+/* footer */
+#footer{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    color: rgb(124, 123, 123);
+    padding: 12px;    
+}
+
+
